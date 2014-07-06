@@ -1,5 +1,7 @@
 var Backbone = require( 'backbone' );
+var Movies = require( 'collections/movies' );
+var data = require( '../movies.json' );
 
-module.exports = function() {
-  return Backbone;
-};
+var movies = new Movies( data );
+
+module.exports = movies;
