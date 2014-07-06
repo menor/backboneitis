@@ -1,0 +1,14 @@
+{
+  "name": "backboneitis",
+  "version": "0.0.0",
+  "description": "My only regret is that I have backboneitis.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "backbone"
+  ],
+  "author": "Jose",
+  "license": "ISC"
+}
