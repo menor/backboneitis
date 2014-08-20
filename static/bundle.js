@@ -80,7 +80,11 @@ var MovieView = Backbone.View.extend( {
   className: 'movie',
   template: '<h1><%= title %></h1>',
 
-  render: function(){
+  events: {
+    'click': '_selectMovie'
+  },
+
+  render: function() {
     var tmpl = _.template( this.template );
     this.$el.html( tmpl( this.model.toJSON() ) );
     this.$el.toggleClass( 'selected', this.model.get( 'selected') );
@@ -89,6 +93,11 @@ var MovieView = Backbone.View.extend( {
 
   initialize: function() {
     this.listenTo( this.model, 'change: title', this.render );
+  },
+
+  _selectMovie: function( e ) {
+    e.preventDefault();
+    console.log( $( e.currentTarget ).html() );
   }
 
 } );
