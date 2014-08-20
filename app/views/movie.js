@@ -24,7 +24,10 @@ var MovieView = Backbone.View.extend( {
 
   _selectMovie: function( e ) {
     e.preventDefault();
-    console.log( $( e.currentTarget ).html() );
+    if( !this.model.get( 'selected' ) ) {
+      this.model.collection.resetSelected();
+      this.model.collection.selectByID( this.model.id );
+    }
   }
 
 } );

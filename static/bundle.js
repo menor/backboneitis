@@ -46,7 +46,7 @@ var Movies = Backbone.Collection.extend( {
   },
 
   // Select a specific model
-  selectById: function( id ) {
+  selectByID: function( id ) {
     this.resetSelected();
     var movie = this.get( id );
     movie.set( { "selected": true });
@@ -97,7 +97,10 @@ var MovieView = Backbone.View.extend( {
 
   _selectMovie: function( e ) {
     e.preventDefault();
-    console.log( $( e.currentTarget ).html() );
+    if( !this.model.get( 'selected' ) ) {
+      this.model.collection.resetSelected();
+      this.model.collection.selectByID( this.model.id );
+    }
   }
 
 } );

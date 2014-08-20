@@ -12,7 +12,7 @@ var Movies = Backbone.Collection.extend( {
   },
 
   // Select a specific model
-  selectById: function( id ) {
+  selectByID: function( id ) {
     this.resetSelected();
     var movie = this.get( id );
     movie.set( { "selected": true });
