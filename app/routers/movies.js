@@ -24,7 +24,7 @@ var MoviesRouter = Backbone.Router.extend( {
     this.moviesList.render();
   },
 
-  initialize: function() {
+  initialize: function( options ) {
     this.movies = movies;
     this.moviesList = new MoviesList( {
       el: options.el,
