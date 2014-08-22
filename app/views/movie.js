@@ -27,6 +27,7 @@ var MovieView = Backbone.View.extend( {
     if( !this.model.get( 'selected' ) ) {
       this.model.collection.resetSelected();
       this.model.collection.selectByID( this.model.id );
+      this.router.navigate( "/movies/" + this.model.id );
     }
   }
 
