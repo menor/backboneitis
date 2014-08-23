@@ -30,6 +30,7 @@ var MoviesRouter = Backbone.Router.extend( {
       el: options.el,
       collection: movies
     } );
+    _.extend( this.moviesList, { router: this } );
   }
 } );
 
