@@ -1,5 +1,6 @@
 [
   { "id": 1, "title": "The Thing" },
   { "id": 2, "title": "Robocop" },
-  { "id": 3, "title": "Evil Dead" }
+  { "id": 3, "title": "Evil Dead" },
+  { "id": 4, "title": "Cabin in the Woods" }
 ]
